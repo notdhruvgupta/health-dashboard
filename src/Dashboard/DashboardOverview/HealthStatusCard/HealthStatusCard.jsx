@@ -4,7 +4,7 @@ import healthData from "../../../data/HealthCard"; // Assuming you have a JSON f
 
 function HealthStatusCard() {
   return (
-    <div className="flex flex-col justify-between h-full">
+    <div className="flex flex-col justify-between gap-3 h-full">
       {healthData.map((item, index) => (
         <div
           key={index}
