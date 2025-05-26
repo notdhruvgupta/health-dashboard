@@ -43,11 +43,11 @@ function DashboardMainComponent() {
 
       {/* Dashboard Overview */}
       <div className=" row-start-3 md:row-span-5 rounded-lg mx-4 mb-5 md:m-0">
-        <div className="flex md:h-full gap-3 justify-center items-center">
-          <div className="flex-[5] md:h-full">
+        <div className="flex h-full gap-3 justify-center items-center">
+          <div className="flex-[5] h-full">
             <AnatomySection />
           </div>
-          <div className="flex-[3] md:h-full">
+          <div className="flex-[3] h-full">
             <HealthStatusCard />
           </div>
         </div>

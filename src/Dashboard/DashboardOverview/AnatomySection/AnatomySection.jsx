@@ -3,8 +3,8 @@ import React from "react";
 
 function AnatomySection() {
   return (
-    <div className="flex items-center justify-center md:h-full w-full relative">
-      <div className="md:h-full bg-primaryLight rounded-lg">
+    <div className="flex items-center justify-center h-full w-full relative">
+      <div className="h-full bg-primaryLight rounded-lg">
         <img className=" object-contain md:h-full" src="/anatomy.png" alt="" />
       </div>
 
