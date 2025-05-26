@@ -11,25 +11,27 @@ function HealthStatusCard() {
           className=" bg-primaryLight p-5 flex flex-col gap-1 rounded-lg"
         >
           <div className="flex items-center gap-2">
-            <img className="h-8 w-8" src={item.image} alt="" />
-            <h1 className=" text-lg font-semibold text-secondary">
+            <img className="md:h-8 md:w-8 h-6 w-6" src={item.image} alt="" />
+            <h1 className="md:text-lg font-semibold text-secondary">
               {item.title}
             </h1>
           </div>
-          <p className="text-sm text-black/50">Date: {item.Date}</p>
+          <p className="md:text-sm text-xs text-black/50 text-nowrap">Date: {item.Date}</p>
           <div
-            className={` rounded-full overflow-hidden w-full bg-black/10 h-2`}
+            className={` rounded-full overflow-hidden w-full bg-black/10 md:h-2 h-1`}
           >
             <div
-              className={` w-[${item.progress}%] rounded-full h-2
-                bg-${
-                item.progress > 75
-                  ? "green"
-                  : item.progress > 50
-                  ? "yellow"
-                  : "red"
-              }-500
+              className={` 
+                rounded-full md:h-2 h-1
+                ${
+                  item.progress > 75
+                    ? "bg-green-500"
+                    : item.progress > 50
+                    ? "bg-yellow-500"
+                    : "bg-red-500"
+                }
               `}
+              style={{ width: `${item.progress}%` }}
             ></div>
           </div>
         </div>

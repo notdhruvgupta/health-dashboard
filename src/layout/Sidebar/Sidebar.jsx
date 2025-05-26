@@ -9,6 +9,7 @@ import {
   Phone,
   Settings,
 } from "lucide-react";
+import Logo from "../Header/Logo";
 
 const sidebarData = [
   {
@@ -33,6 +34,9 @@ const sidebarData = [
 function Sidebar() {
   return (
     <div className="bg-primaryLight flex flex-col p-10 text-secondary h-full">
+      <div className="mb-8">
+        <Logo />
+      </div>
       {sidebarData.map((item, index) => (
         <div key={index} className="text-secondary/60 mb-8">
           <p className="text-black/40 font-medium">{item.heading}</p>

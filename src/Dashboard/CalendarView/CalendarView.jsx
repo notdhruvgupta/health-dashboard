@@ -6,8 +6,8 @@ import AppointmentCard from "../../Component/SimpleAppointmentCard/AppointmentCa
 function CalendarView() {
   return (
     <div className="grid grid-rows-6 h-full gap-2">
-      <div className="rounded-lg flex items-center justify-between px-5">
-        <h1 className="text-xl font-semibold text-secondaryLight">
+      <div className="rounded-lg flex items-center justify-between md:px-5 px-3">
+        <h1 className="md:text-xl text-lg font-bold text-secondaryLight">
           October 2025
         </h1>
         <div className="flex gap-2 text-secondaryLight">
@@ -15,18 +15,19 @@ function CalendarView() {
           <ArrowRight />
         </div>
       </div>
-      <div className=" row-span-3 rounded-lg">
-        <div className="grid grid-cols-7 gap-2 h-full overflow-hidden">
+
+      <div className=" row-span-3 rounded-lg ">
+        <div className="grid grid-cols-7 md:gap-2 h-full">
           {CalendarData.map((data, index) => (
             <div
               key={index}
-              className={`hover:bg-primaryDark cursor-default transition-colors duration-500 h-full px-2 rounded-xl flex flex-col justify-center ${data.disable ? " opacity-50 cursor-not-allowed" : ""}`}
+              className={`hover:bg-primaryDark cursor-default transition-colors duration-500 h-full md:px-2 pt-1 md:pt-0 px-0.5 rounded-xl flex flex-col md:justify-center ${data.disable ? " opacity-50 cursor-not-allowed" : ""}`}
             >
-              <p className="text-sm font-semibold text-secondaryLight/70 text-center">
+              <p className="md:text-sm text-xs font-semibold text-secondaryLight/70 text-center">
                 {data.day}
               </p>
-              <p className="text-2xl font-bold text-secondary text-center mb-1">
-                {data.date}{" "}
+              <p className="md:text-2xl text-lg font-bold text-secondary text-center mb-1">
+                {data.date}
               </p>
               {data.appointments.map((appointment, appIndex) => (
                 <div
@@ -36,14 +37,15 @@ function CalendarView() {
                   transition-colors duration-200  
                   `}
                 >
-                  {appointment.time != "" ? appointment.time : <Minus />}
+                  {appointment.time !== "" ? appointment.time : <Minus />}
                 </div>
               ))}
             </div>
           ))}
         </div>
       </div>
-      <div className="px-5 cursor-pointer row-span-2 flex gap-3 rounded-lg">
+
+      <div className="md:px-5 px-2 overflow-x-auto cursor-pointer row-span-2 flex gap-3 rounded-lg">
         <AppointmentCard
           doctor="Dentist"
           time="09:00 - 11:00"
