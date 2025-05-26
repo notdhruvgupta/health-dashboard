@@ -12,7 +12,7 @@ export default [
         "progress": 88
     },
     {
-        "image": "Bone.png",
+        "image": "bone.png",
         "title": "Bones",
         "Date": "15 Oct 2025",
         "progress": 10
