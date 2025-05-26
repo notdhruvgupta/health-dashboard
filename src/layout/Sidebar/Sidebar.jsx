@@ -33,7 +33,7 @@ const sidebarData = [
 
 function Sidebar() {
   return (
-    <div className="bg-primaryLight flex flex-col p-10 text-secondary h-full min-w-[240px]">
+    <div className="bg-primaryLight flex flex-col px-10 py-5 text-secondary h-full min-w-[240px]">
       <div className="mb-8">
         <Logo />
       </div>
