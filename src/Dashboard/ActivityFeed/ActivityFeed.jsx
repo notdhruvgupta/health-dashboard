@@ -1,6 +1,4 @@
 import React from "react";
-import { LineChart, Line } from "recharts";
-const data = [{ name: "Page A", uv: 400, pv: 2400, amt: 2400 }];
 
 function ActivityFeed() {
   return (
@@ -13,10 +11,6 @@ function ActivityFeed() {
       </div>
 
       {/* bar chart */}
-
-      <LineChart width={400} height={400} data={data}>
-        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-      </LineChart>
 
       <div className="grid grid-cols-7 gap-4 mt-5 md:mx-5">
         {[1, 2, 3, 4, 5, 6, 7].map((_, index) => (
